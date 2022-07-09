@@ -23,6 +23,11 @@ initWebRoute(app)
 //init api route
 initApiRoute(app)
 
+//handle 404 not found
+app.use((req,res) => {
+  return res.render('404.ejs')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
